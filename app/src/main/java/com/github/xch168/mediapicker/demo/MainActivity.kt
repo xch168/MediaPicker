@@ -1,4 +1,4 @@
-package com.github.xch168.mediapicker
+package com.github.xch168.mediapicker.demo
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

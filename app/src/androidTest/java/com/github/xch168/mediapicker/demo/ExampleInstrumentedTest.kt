@@ -1,4 +1,4 @@
-package com.github.xch168.mediapicker
+package com.github.xch168.mediapicker.demo
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
