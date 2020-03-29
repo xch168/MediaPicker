@@ -31,15 +31,6 @@ override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) 
     super.onActivityResult(requestCode, resultCode, data)
     if (requestCode == MediaPicker.PICK_REQUEST_CODE && resultCode == Activity.RESULT_OK) {
         val media = data?.getParcelableExtra<Media>(MediaPicker.RESULT_MEDIA)
-        if (media != null) {
-            Glide.with(this).load(media.path).placeholder(R.drawable.mp_ic_thumb_default).into(mThumbView)
-            if (media is Media.Video) {
-                mDurationView.text = formatTime(media.duration)
-                mDurationView.visibility = View.VISIBLE
-            } else {
-                mDurationView.visibility = View.GONE
-            }
-        }
     }
 }
 ```
