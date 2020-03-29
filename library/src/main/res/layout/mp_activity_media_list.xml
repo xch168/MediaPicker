@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MediaListActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_tip"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="长按拖拽可调整视频顺序"
+        android:textColor="#888888"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/select_media_list"
+        app:layout_constraintLeft_toLeftOf="@+id/select_media_list" />
+
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="50dp"
+        android:layout_height="25dp"
+        android:background="@drawable/mp_selector_choose_next_btn_bg"
+        android:enabled="false"
+        android:onClick="handleNextBtnClick"
+        android:text="下一步"
+        android:textColor="@drawable/mp_selector_choose_next_btn_textcolor"
+        android:textSize="12sp"
+        app:layout_constraintRight_toRightOf="@+id/select_media_list"
+        app:layout_constraintTop_toTopOf="@+id/tv_tip" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/select_media_list"
+        android:layout_width="match_parent"
+        android:layout_height="73dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        tools:visibility="visible"
+        app:constraint_referenced_ids="tv_tip,btn_next,select_media_list" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
