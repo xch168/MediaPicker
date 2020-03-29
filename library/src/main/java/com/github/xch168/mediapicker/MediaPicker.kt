@@ -36,10 +36,14 @@ class MediaPicker {
             }
         }
 
+        @JvmStatic
+        @JvmOverloads
         fun toPickVideo(context: Context, choiceMode: Int = CHOICE_MODE_SINGLE, nextAction: Class<out Any>? = null) {
             toPick(context, MEDIA_TYPE_VIDEO, choiceMode, nextAction)
         }
 
+        @JvmStatic
+        @JvmOverloads
         fun toPickImage(context: Context, choiceMode: Int = CHOICE_MODE_SINGLE, nextAction: Class<out Any>? = null) {
             toPick(context, MEDIA_TYPE_IMAGE, choiceMode, nextAction)
         }

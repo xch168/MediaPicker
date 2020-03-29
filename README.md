@@ -2,7 +2,7 @@
 
 ## Download
 ```groovy
-implementation 'com.github.xch168:media-picker:0.0.1'
+implementation 'com.github.xch168:media-picker:0.0.3'
 ```
 
 ## Usage
